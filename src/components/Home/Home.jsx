@@ -1,9 +1,13 @@
 import React from "react";
-import { Button, Container } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import bg from "../../assets/images/bg-1.png";
 import "./Home.css";
+import { useLoaderData } from "react-router-dom";
+import Services from "../Services/Services";
 
 const Home = () => {
+  const data = useLoaderData();
+  console.log(data);
   return (
     <>
       <Container>
@@ -30,6 +34,13 @@ const Home = () => {
         <div>
           <h3 className="text-center fs-2 text-uppercase">What You Learn !</h3>
         </div>
+        <Row className="mt-5">
+          {data.map((service) => (
+            <Col md={4} key={service.id}>
+              <Services service={service}></Services>
+            </Col>
+          ))}
+        </Row>
       </Container>
     </>
   );

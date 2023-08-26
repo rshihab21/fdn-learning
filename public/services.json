@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Basic UI & UX Design",
+    "description": "Seamlessly visualize quality ellectual capital without superior collaboration and idea tically",
+    "img": "https://i.ibb.co/VVp57j7/evn-img-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Frint-End Development",
+    "description": "Seamlessly visualize quality ellectual capital without superior collaboration and idea tically",
+    "img": "https://i.ibb.co/mzxg68s/evn-img-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Java Developer",
+    "description": "Seamlessly visualize quality ellectual capital without superior collaboration and idea tically",
+    "img": "https://i.ibb.co/MNtC0tL/evn-img-3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Python Developer",
+    "description": "Seamlessly visualize quality ellectual capital without superior collaboration and idea tically",
+    "img": "https://i.ibb.co/KzkH8Cb/evn-img-4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Diital Marketing",
+    "description": "Seamlessly visualize quality ellectual capital without superior collaboration and idea tically",
+    "img": "https://i.ibb.co/kg0xpNp/evn-img-5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "React Developer",
+    "description": "Seamlessly visualize quality ellectual capital without superior collaboration and idea tically",
+    "img": "https://i.ibb.co/5xwZPhZ/evn-img-6.jpg"
+  }
+]
