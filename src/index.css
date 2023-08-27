@@ -1,0 +1,7 @@
+.nav-menu a {
+  color: #fff;
+  font-size: 20px;
+}
+.nav-menu a:hover {
+  color: rgb(209, 177, 239);
+}

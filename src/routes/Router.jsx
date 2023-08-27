@@ -4,6 +4,7 @@ import Home from "../components/Home/Home";
 import About from "../components/About/About";
 import Blog from "../components/Blog/Blog";
 import Contact from "../components/Contact/Contact";
+import ServiceDetails from "../components/ServiceDetails/ServiceDetails";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,14 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () => fetch("services.json"),
+      },
+      {
+        path: "service/:serviceId",
+        element: <ServiceDetails></ServiceDetails>,
+        loader: ({ params }) =>
+          fetch(
+            `https://jsonplaceholder.typicode.com/posts/${params.serviceId}`
+          ),
       },
       {
         path: "/about",

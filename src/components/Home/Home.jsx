@@ -7,13 +7,13 @@ import Services from "../Services/Services";
 
 const Home = () => {
   const data = useLoaderData();
-  console.log(data);
+
   return (
     <>
       <Container>
         <div className="d-flex  py-5 justify-content-between">
-          <div className="row align-items-center">
-            <div className="col-md-6">
+          <Row className="align-items-center">
+            <Col md={6}>
               <div className="text-justify">
                 <h3 className="fs-1 text-uppercase">Let's Make</h3>
                 <p>
@@ -25,11 +25,11 @@ const Home = () => {
                   Learn More
                 </Button>
               </div>
-            </div>
-            <div className="col-md-6">
+            </Col>
+            <Col md={6}>
               <img className="bg-img" src={bg} alt="" />
-            </div>
-          </div>
+            </Col>
+          </Row>
         </div>
         <div>
           <h3 className="text-center fs-2 text-uppercase">What You Learn !</h3>

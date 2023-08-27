@@ -7,7 +7,7 @@ const NavbarMenu = () => {
     <>
       <Navbar collapseOnSelect expand="lg" className="bg-primary text-light">
         <Container>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand className="text-light fs-2 fw-bold" as={Link} to="/">
             FDN
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -15,7 +15,7 @@ const NavbarMenu = () => {
             id="responsive-navbar-nav"
             className="justify-content-end"
           >
-            <Nav>
+            <Nav className="nav-menu">
               <Nav.Link as={Link} to="/">
                 Home
               </Nav.Link>
