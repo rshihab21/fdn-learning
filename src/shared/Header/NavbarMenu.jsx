@@ -28,6 +28,9 @@ const NavbarMenu = () => {
               <Nav.Link as={Link} to="/contact">
                 Contact
               </Nav.Link>
+              <Nav.Link className="sign-up" as={Link} to="/signup">
+                Sign Up
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

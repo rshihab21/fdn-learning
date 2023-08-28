@@ -5,6 +5,7 @@ import About from "../components/About/About";
 import Blog from "../components/Blog/Blog";
 import Contact from "../components/Contact/Contact";
 import ServiceDetails from "../components/ServiceDetails/ServiceDetails";
+import SignUp from "../components/SignUp/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>,
       },
     ],
   },
