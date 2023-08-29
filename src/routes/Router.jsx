@@ -6,6 +6,7 @@ import Blog from "../components/Blog/Blog";
 import Contact from "../components/Contact/Contact";
 import ServiceDetails from "../components/ServiceDetails/ServiceDetails";
 import SignUp from "../components/SignUp/SignUp";
+import Login from "../components/Login/Login";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp></SignUp>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
       },
     ],
   },
