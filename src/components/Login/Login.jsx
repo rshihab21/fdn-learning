@@ -1,21 +1,49 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button, Container, Form, Row } from "react-bootstrap";
 import { FaFacebook, FaGooglePlus } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { AuthConText } from "../../providers/AuthProvider";
 
 const Login = () => {
+  const { userLogin, user } = useContext(AuthConText);
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+    userLogin(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+
+        form.reset();
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
   return (
     <>
       <Container>
         <Row className="w-50 mx-auto">
-          <Form className="mt-3 border p-5 rounded">
+          <Form className="mt-3 border p-5 rounded" onSubmit={handleLogin}>
             <h1>Login</h1>
             <Form.Group className="mb-3" controlId="formGroupEmail">
-              <Form.Control type="text" placeholder="Username or Email" />
+              <Form.Control
+                type="text"
+                name="email"
+                placeholder="Username or Email"
+              />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formGroupPassword">
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control
+                type="password"
+                name="password"
+                placeholder="Password"
+              />
             </Form.Group>
 
             <Form.Control

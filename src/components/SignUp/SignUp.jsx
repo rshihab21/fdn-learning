@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button, Container, Form, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaGooglePlus } from "react-icons/fa6";
+import { AuthConText } from "../../providers/AuthProvider";
 
 const SignUp = () => {
+  const { createUser } = useContext(AuthConText);
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -11,6 +13,15 @@ const SignUp = () => {
     const password = form.password.value;
     console.log(email, password);
     // const user = { email, password };
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        form.reset();
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
   return (
     <Container>
