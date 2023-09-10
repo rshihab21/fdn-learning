@@ -30,8 +30,8 @@ const Login = () => {
               </spna>
             </p>
           </Form>
-          <div class="grid gap-1 d-flex flex-column align-items-center mt-3">
-            <div class="p-2 g-col-12">
+          <div className="grid gap-1 d-flex flex-column align-items-center mt-3">
+            <div className="p-2 g-col-12">
               <Button variant="outline-primary rounded fs-5">
                 <span className="me-2">
                   <FaFacebook />
@@ -39,7 +39,7 @@ const Login = () => {
                 Continue With Facebook
               </Button>
             </div>
-            <div class="p-2 g-col-12">
+            <div className="p-2 g-col-12">
               <Button variant="outline-primary rounded fs-5">
                 <span className="me-2">
                   <FaGooglePlus />

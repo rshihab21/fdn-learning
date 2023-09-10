@@ -13,13 +13,13 @@
   },
   {
     "id": 3,
-    "name": "Java Developer",
+    "name": "Programming With Java",
     "description": "Seamlessly visualize quality ellectual capital without superior collaboration and idea tically",
     "img": "https://i.ibb.co/MNtC0tL/evn-img-3.jpg"
   },
   {
     "id": 4,
-    "name": "Python Developer",
+    "name": "Programming with Python",
     "description": "Seamlessly visualize quality ellectual capital without superior collaboration and idea tically",
     "img": "https://i.ibb.co/KzkH8Cb/evn-img-4.jpg"
   },
@@ -31,7 +31,7 @@
   },
   {
     "id": 6,
-    "name": "React Developer",
+    "name": "Spoken English",
     "description": "Seamlessly visualize quality ellectual capital without superior collaboration and idea tically",
     "img": "https://i.ibb.co/5xwZPhZ/evn-img-6.jpg"
   }

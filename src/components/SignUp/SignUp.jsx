@@ -1,28 +1,44 @@
 import React from "react";
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Button, Container, Form, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaGooglePlus } from "react-icons/fa6";
 
 const SignUp = () => {
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+    // const user = { email, password };
+  };
   return (
     <Container>
       <Row className="w-50 mx-auto">
-        <Form className="mt-3 border p-5 rounded">
+        <Form className="mt-3 border p-5 rounded" onSubmit={handleFormSubmit}>
           <h1>Create an Account</h1>
-          <Form.Group className="mb-3" controlId="formGroupEmail">
+          <Form.Group className="mb-3" controlId="formGroupName">
             <Form.Control type="text" placeholder="First name" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formGroupEmail">
             <Form.Control type="text" placeholder="Last Name" />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formGroupEmail">
-            <Form.Control type="text" placeholder="Username or Email" />
+          <Form.Group className="mb-3" controlId="formGroupPassword">
+            <Form.Control
+              type="text"
+              name="email"
+              placeholder="Username or Email"
+            />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formGroupPassword">
-            <Form.Control type="password" placeholder="Password" />
+          <Form.Group className="mb-3" controlId="formGroupPassword1">
+            <Form.Control
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formGroupPassword">
+          <Form.Group className="mb-3" controlId="formGroupPassword2">
             <Form.Control type="password" placeholder="Confirm Password" />
           </Form.Group>
 
@@ -38,8 +54,8 @@ const SignUp = () => {
             </spna>
           </p>
         </Form>
-        <div class="grid gap-1 d-flex flex-column align-items-center mt-3">
-          <div class="p-2 g-col-12">
+        <div className="grid gap-1 d-flex flex-column align-items-center mt-3">
+          <div className="p-2 g-col-12">
             <Button variant="outline-primary rounded fs-5">
               <span className="me-2">
                 <FaFacebook />

@@ -25,9 +25,7 @@ const NavbarMenu = () => {
               <Nav.Link as={Link} to="/blog">
                 Blog
               </Nav.Link>
-              <Nav.Link as={Link} to="/contact">
-                Contact
-              </Nav.Link>
+
               <Nav.Link className="sign-up" as={Link} to="/signup">
                 Sign Up
               </Nav.Link>
