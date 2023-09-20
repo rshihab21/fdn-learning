@@ -4,6 +4,7 @@ import bg from "../../assets/images/bg-1.png";
 import "./Home.css";
 import { useLoaderData } from "react-router-dom";
 import Services from "../Services/Services";
+import RealLife from "../RealLife/RealLife";
 
 const Home = () => {
   const data = useLoaderData();
@@ -41,6 +42,7 @@ const Home = () => {
             </Col>
           ))}
         </Row>
+        <RealLife></RealLife>
       </Container>
     </>
   );

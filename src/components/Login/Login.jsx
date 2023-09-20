@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import { Button, Container, Form, Row } from "react-bootstrap";
 import { FaFacebook, FaGooglePlus } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthConText } from "../../providers/AuthProvider";
 
 const Login = () => {
   const { userLogin, user } = useContext(AuthConText);
+  const navigate = useNavigate();
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -16,7 +17,9 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
-
+        if (user) {
+          navigate("/");
+        }
         form.reset();
       })
       .catch((error) => {

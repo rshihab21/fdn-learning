@@ -5,18 +5,32 @@ import { FaFacebook, FaGooglePlus } from "react-icons/fa6";
 import { AuthConText } from "../../providers/AuthProvider";
 
 const SignUp = () => {
-  const { createUser } = useContext(AuthConText);
+  const { createUser, updateprofile, setUser } = useContext(AuthConText);
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
+    const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+    const confirmPassword = form.confirmPassword.value;
+    console.log(password, confirmPassword);
+    if (password !== confirmPassword) {
+      return;
+    }
+    console.log(name, email, password);
     // const user = { email, password };
     createUser(email, password)
       .then((result) => {
         const user = result.user;
+        setUser(user);
         console.log(user);
+        updateprofile(name)
+          .then(() => {
+            console.log("Profile Updated!");
+          })
+          .catch((error) => {
+            console.log(error.message);
+          });
         form.reset();
       })
       .catch((error) => {
@@ -29,11 +43,9 @@ const SignUp = () => {
         <Form className="mt-3 border p-5 rounded" onSubmit={handleFormSubmit}>
           <h1>Create an Account</h1>
           <Form.Group className="mb-3" controlId="formGroupName">
-            <Form.Control type="text" placeholder="First name" />
+            <Form.Control type="text" name="name" placeholder="Your Name" />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formGroupEmail">
-            <Form.Control type="text" placeholder="Last Name" />
-          </Form.Group>
+
           <Form.Group className="mb-3" controlId="formGroupPassword">
             <Form.Control
               type="text"
@@ -50,7 +62,11 @@ const SignUp = () => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formGroupPassword2">
-            <Form.Control type="password" placeholder="Confirm Password" />
+            <Form.Control
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+            />
           </Form.Group>
 
           <Form.Control
